@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(plugin = { "pretty", "html: cucumber/cucumber-reports/cucumber.html",
 		"json: cucumber/cucumber-reports/cucumber.json" }, features = {
-				"src/test/resources/features" }, glue = { "app.seleniumautomation.stepdefinitions" })
+				"src/test/resources/features" }, glue = { "app.seleniumautomation.stepdefinitions" }, tags = "FormAuthentication")
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
