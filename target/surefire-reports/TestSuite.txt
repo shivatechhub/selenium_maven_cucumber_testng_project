@@ -1,4 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.624 s -- in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.92 s <<< FAILURE! -- in TestSuite
+app.seleniumautomation.TestRunner.runScenario["validate the form dropdown functionality", "Dropdown functionality"](1) -- Time elapsed: 6.653 s <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+	at app.seleniumautomation.stepdefinitions.Dropdownsteps.i_select_a_vale_from_the_dropdown(Dropdownsteps.java:36)
+	at ✽.I select a Singapore from the dropdown(file:///D:/Selenium_Java_Maven_cucumber/selenium_maven_cucumber_testng_project/src/test/resources/features/Dropdown.feature:9)
+
