@@ -8,5 +8,4 @@ import io.cucumber.testng.CucumberOptions;
 				"src/test/resources/features" }, glue = { "app.seleniumautomation.stepdefinitions" })
 
 public class TestRunner extends AbstractTestNGCucumberTests {
-
 }
