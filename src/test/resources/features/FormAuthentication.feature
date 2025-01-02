@@ -2,7 +2,7 @@
 Feature: Form Authentication functionality
 
   Scenario Outline: validate the form authentication functionality
-    Given I navigate to the <url>
+    Given I navigate to the form authentication link in the <url>
     When I click on form authentication and enter <username> and <password>
     Then validate login successful
 
