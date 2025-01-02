@@ -49,6 +49,6 @@ public class FormAuthenticationSteps {
         // Assert login success
         assertTrue("Login was successful", loginSuccessful);
         // Close the browser after the test
-        driver.quit();
+        //driver.quit();
     }
 }

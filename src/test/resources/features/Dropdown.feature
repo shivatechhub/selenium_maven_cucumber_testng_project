@@ -5,7 +5,7 @@ Feature: Dropdown functionality
  # I want to use this template for my feature file
 
   Scenario Outline: validate the form dropdown functionality
-    Given I navigate to the <url>
+    Given I navigate to only testing <url>
     When I select a <value> from the dropdown
     Then I validate if the selected value is populated
     
