@@ -51,7 +51,7 @@ public class Dropdownsteps {
 	    	WebElement dropdown=driver.findElement(By.xpath("(//select)")); 
 	    	Select selectdropdownvalue=new Select(dropdown);
 	    	System.out.println(selectdropdownvalue.getFirstSelectedOption().getText());
-	        driver.quit();
+	        //driver.quit();
 	    }
 	
 
