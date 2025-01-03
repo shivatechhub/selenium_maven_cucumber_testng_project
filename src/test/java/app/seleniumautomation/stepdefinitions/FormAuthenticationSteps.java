@@ -14,38 +14,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FormAuthenticationSteps {
-
-	public WebDriver driver;
-	
+	public WebDriver driver;	
 	@Given("^I navigate to the form authentication link in the (.*)$")
 	public void navigate_to_form_authentication(String website) {
-		// Initialize WebDriver and navigate to the URL
 		driver = new ChromeDriver();
 		driver.get(website);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 	}
-	// When I click on form authentication and enter <username> and <password>
 	@When("^I click on form authentication and enter (.*) and (.*)$")
 	public void i_click_on_form_authentication_and_enter_credentials(String username, String password) throws InterruptedException {
-		// Locate and click the form authentication link (you might need to adjust the
-		// locator)
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[text()='Form Authentication']")).click();
-		// Enter the username and password in the login form (adjust locators as needed)
 		driver.findElement(By.id("username")).sendKeys(username);
 		driver.findElement(By.id("password")).sendKeys(password);
-		driver.findElement(By.xpath("//button[@type='submit']")).click(); // Adjust if needed
+		driver.findElement(By.xpath("//button[@type='submit']")).click(); 
 	}
-
-	// Then validate login successful
 	@Then("^validate login successful$")
 	public void validate_login_successful() {
-		// Validate if login was successful by checking the presence of an element that
-		// is visible after login
-		// For example, check if the logout button is visible after successful login
 		boolean loginSuccessful = driver.findElement(By.linkText("Logout")).isDisplayed();
-		// Assert login success
 		assertTrue("Login was successful", loginSuccessful);
+		driver.quit();
 	}
 }
