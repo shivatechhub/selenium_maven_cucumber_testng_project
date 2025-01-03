@@ -11,6 +11,7 @@ import io.cucumber.java.en.When;
 
 public class Dropdownsteps {
 	public WebDriver driver = null;
+  
 	@Given("^I navigate to the dropdown functionality in the (.*)$")
 	public void navigate_to_dropdown(String website) {
 		driver = new ChromeDriver();
@@ -25,6 +26,7 @@ public class Dropdownsteps {
 		Select selectdropdownvalue = new Select(dropdown);
 		selectdropdownvalue.selectByValue(value);
 		System.out.println(selectdropdownvalue.getFirstSelectedOption().getText());
+		Thread.sleep(5000);
 	}
 	@Then("^I validate if the selected value is populated$")
 	public void validate_if_the_selected_value_is_populated() {
