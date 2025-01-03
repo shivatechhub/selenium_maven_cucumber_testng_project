@@ -3,7 +3,7 @@
 <suite name="Default suite">
   <test name="FormAuthentication Test" verbose="2">
     <classes>
-      <class name="app.seleniumautomation.TestRunner"/>
+      <class name="app.seleniumautomation.testrunner.TestRunner"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
